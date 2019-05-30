@@ -6,8 +6,7 @@ version 1.0 -- December/2017
 
 Please cite the following paper (more theoretical and technical details) if your are using this code:
 
-Kai-Xuan Chen, Xiao-Jun Wu, Rui Wang, Josef Kittler. Riemannian kernel based nystrom method for approximate infinite-dimensional covariance 
-descriptors with application to image set classification. In 2018 24th International Conference on Pattern Recognition (ICPR), pages 651–656. IEEE, 2018.
+Kai-Xuan Chen, Xiao-Jun Wu, Rui Wang, Josef Kittler. Riemannian kernel based nystrom method for approximate infinite-dimensional covariance  descriptors with application to image set classification. In 2018 24th International Conference on Pattern Recognition (ICPR), pages 651–656. IEEE, 2018.
 
 BibTex : 
 ```
@@ -21,9 +20,9 @@ BibTex :
 }
 ```
 
-The ETH-80 dataset is needed to be downloaded(https://github.com/Kai-Xuan/ETH-80/),  
-and put 8 filefolders(visual image sets from 8 different categories) into filefolder '.\ETH-80\'.  
-Please run 'read_ETH.m' to generate CSPD matrices. Then run 'run_ETH.m' for image set classification.  
+
+The ETH-80 dataset is needed to be downloaded(https://github.com/Kai-Xuan/ETH-80/),  and put 8 filefolders(visual image sets from 8 different categories) into filefolder '.\ETH-80\'.  
+Please run 'read_ETH.m' to generate AidCovDs. Then run 'run_ETH.m' for image set classification.  
 
 
 For classification, we employ two classifiers in this source code(Version 2.0).  
