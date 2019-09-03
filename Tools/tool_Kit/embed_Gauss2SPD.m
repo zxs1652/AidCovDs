@@ -1,0 +1,23 @@
+function current_SPD = embed_Gauss2SPD(current_Feature)
+        alpha = 0.75;
+        beta = 0.3;
+        constrantGaussian = 1e-16;
+        gama = (1-alpha)/(2*alpha);
+        current_COV = cov(current_Feature');
+        d_Train = size(current_COV,1);
+        mean_Vector = mean(current_Feature,2);
+        [U,S,~] = svd(current_COV);
+        diag_S = diag(S);      
+        diag_S = sign(diag_S).*(((gama).^2+abs(diag_S/alpha)).^(0.55)-gama);
+        COVD = U*(diag(diag_S))*U'; 
+        temp_Gau = ones(d_Train+1,d_Train+1);
+        temp_Gau(1:d_Train,1:d_Train) = (COVD + (beta)^2.*mean_Vector*mean_Vector'); 
+        temp_Gau(1:d_Train,1+d_Train) = beta.*mean_Vector;
+        temp_Gau(1+d_Train,1:d_Train) = beta.*mean_Vector';
+        [U, S, ~] = svd(temp_Gau);         
+        diag_S = diag(S);
+        diag_S = diag_S + constrantGaussian;
+        log_diag_S = sign(diag_S).*abs(diag_S).^(0.9);
+        current_SPD = U*(diag(log_diag_S))*U'; 
+%         current_SPD = logm(current_SPD);
+end
