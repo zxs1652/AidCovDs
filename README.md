@@ -30,3 +30,9 @@ Vedaldi A, Fulkerson B. VLFeat: An open and portable library of computer vision 
 
 For classification, we employ four NN classifiers and two discriminative classifiers in this source code(Version 2.0).  COV-LDA/COV-PLS:  This method was proposed in the paper:  
 R. Wang, H. Guo, L. S. Davis, and Q. Dai. Covariance discriminative learning: A natural and efficient approach to image set classification. In Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference on, pages 2496-2503. IEEE, 2012. 
+
+
+For more experiment, you can test on Virus dataset (https://github.com/Kai-Xuan/Virus/)
+
+
+
