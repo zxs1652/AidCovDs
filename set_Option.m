@@ -9,9 +9,6 @@
 
 function option = set_Option(name)
     root = pwd;
-    addpath(fullfile(root, 'Mat_File'));
-%     addpath(genpath('Mat_File'));    
-%     addpath(genpath('Tools')); 
     addpath(fullfile(root, 'Tools'));
     addpath(fullfile(root, 'Tools\Gabor'));
     addpath(fullfile(root, 'Tools\vlfeat-0.9.18\toolbox'));
