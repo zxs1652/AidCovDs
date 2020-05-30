@@ -13,8 +13,7 @@ clear;
 clc;
 option = set_Option('ETH');         % set Hy-Parameters
 [option,log_CovDs,dis_Matrix] = loading_Para(option);
-% load (option.mat_File);             % load data for classifiers
-load In_Matrix_ETH.mat;             % random index matrix
+In_Matrix = gen_randMatrix(option);
 row_total = size(In_Matrix,1);      % In_Matrix
 for ite_th = 1:option.num_Ite
     fprintf('------------ite_th :  %d------------------\n',ite_th);
